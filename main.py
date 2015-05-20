@@ -5,7 +5,7 @@ TWITTER_APP_KEY_SECRET = ''
 TWITTER_ACCESS_TOKEN = ''
 TWITTER_ACCESS_TOKEN_SECRET= ''
 
-t = Twitter(auth=OAuth(TWITTER_APP_KEY,TWITTER_APP_KEY_SECRET,TWITTER_ACCESS_TOKEN,TWITTER_ACCESS_TOKEN_SECRET))
+t = Twitter(auth=OAuth(TWITTER_ACCESS_TOKEN,TWITTER_ACCESS_TOKEN_SECRET,TWITTER_APP_KEY,TWITTER_APP_KEY_SECRET))
 
 def search_tweets(q,count=10,m_id=None):
     return t.search.tweets(q=q,result_type='recent',count=count,lang="en",max_id=m_id)
